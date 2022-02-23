@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main()
+{
+        int elecion;
+        int a, b, res;
+        float divR, fa, fb ;
+        printf("Ingrese uno de los siguientes casos: \n [1]: Suma\n [2]: Resta\n [3]: Multiplicación\n [4]: División\n\n >> ")
+; scanf("%d",&elecion);
+       
+        printf("ingrese el valor del primer número: ")
+; scanf("%d",&a);
+        printf("ingrese el valor del segundo número: ")
+; scanf("%d",&b);
+       
+        fa = a;
+        fb = b;
+
+        switch(elecion){
+          case 1: {  
+           
+             res = a + b;
+            printf("El resultado de la suma es: %d", res);
+            break;
+          }
+          case 2: {  
+            
+            res = a - b;
+            printf("El resultado de la resta es: %d", res);
+            break;
+          }
+          case 3: {  
+           
+            res = a * b;
+            printf("El resultado de la multiplicación es: %d", res);
+            break;
+          }
+          case 4: {
+            
+            res = a / b;
+            divR = fa / fb;
+            
+            printf("El resultado entero de la division es: %d \n", res);
+            printf("La division decimal es: %.2f",divR);
+            break;
+          }
+         default: printf("La opción es inválida, intente con otra");
+        }
+
+        return 0;
+}
